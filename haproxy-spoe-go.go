@@ -34,7 +34,7 @@ func handler(req *request.Request) {
 
 
 
-	messageName := "get-ip-reputation"
+	messageName := "check-client-ip"
 
 	mes, err := req.Messages.GetByName(messageName)
 	if err != nil {
