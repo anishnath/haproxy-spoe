@@ -21,6 +21,7 @@ func main() {
 
 		for messages.Next() {
 			msg := messages.Message
+			fmt.Println(msg)
 
 			if msg.Name != "ip-rep" {
 				continue
