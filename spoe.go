@@ -15,7 +15,7 @@ func getReputation(ip net.IP) (float64, error) {
 	return 1.0, nil
 }
 
-func main() {
+func Criteo() {
 	agent := spoe.New(func(messages *spoe.MessageIterator) ([]spoe.Action, error) {
 		reputation := 0.0
 
