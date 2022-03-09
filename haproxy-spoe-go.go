@@ -30,7 +30,7 @@ func main() {
 
 func handler(req *request.Request) {
 
-	log.Printf("handle request EngineID: '%s', StreamID: '%d', FrameID: '%d' with %d messages\n", req.EngineID, req.StreamID, req.FrameID, req.Messages.Len())
+	log.Printf("handle request EngineID: '%s', StreamID: '%d', FrameID: '%d' with %d messages\n", req.EngineID, req.StreamID, req.FrameID, req.Messages)
 
 	messageName := "get-ip-reputation"
 
