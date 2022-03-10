@@ -66,7 +66,7 @@ func handler(req *request.Request) {
 		return
 	}
 
-	body, ok := ipValue.(string)
+	body, ok := bodyValue.(string)
 	if !ok {
 		log.Printf("var 'ip' has wrong type. expect IP addr")
 		return
