@@ -59,4 +59,23 @@ func handler(req *request.Request) {
 	log.Printf("IP: %s, send score '%d'", ip.String(), ipScore)
 
 	req.Actions.SetVar(action.ScopeSession, "ip_score", ipScore)
+
+	bodyValue, ok := mes.KV.Get("body")
+	if !ok {
+		log.Printf("var 'bpdy' not found in message")
+		return
+	}
+
+	body, ok := ipValue.(string)
+	if !ok {
+		log.Printf("var 'ip' has wrong type. expect IP addr")
+		return
+	}
+
+	log.Printf("body: %s, request Body '", body)
+
+
+
+
+
 }
