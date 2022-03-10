@@ -68,9 +68,9 @@ func handler(req *request.Request) {
 		return
 	}
 
-	fmt.Println(bodyValue)
+	//fmt.Println(bodyValue)
 
-	fmt.Println(reflect.TypeOf(bodyValue))
+	//fmt.Println(reflect.TypeOf(bodyValue))
 
 	body, ok := bodyValue.([]uint8)
 
