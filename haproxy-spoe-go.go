@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/negasus/haproxy-spoe-go/action"
 	"github.com/negasus/haproxy-spoe-go/agent"
 	"github.com/negasus/haproxy-spoe-go/request"
@@ -8,6 +9,7 @@ import (
 	"math/rand"
 	"net"
 	"os"
+	"reflect"
 )
 
 func main() {
@@ -66,9 +68,12 @@ func handler(req *request.Request) {
 		return
 	}
 
+	fmt.Println(reflect.TypeOf(bodyValue))
+
 	body, ok := bodyValue.(string)
+
 	if !ok {
-		log.Printf("var 'ip' has wrong type. expect IP addr")
+		log.Printf("var 'body ' has wrong type. expect %s addr", reflect.TypeOf(bodyValue))
 		return
 	}
 
