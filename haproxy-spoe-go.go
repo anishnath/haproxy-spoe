@@ -72,7 +72,9 @@ func handler(req *request.Request) {
 
 	fmt.Println(reflect.TypeOf(bodyValue))
 
-	body, ok := bodyValue.(uint8)
+	body, ok := bodyValue.([]uint8)
+
+	fmt.Println(string(body))
 
 	if !ok {
 		log.Printf("var 'body ' has wrong type. expect %s addr", reflect.TypeOf(bodyValue))
